@@ -8,7 +8,8 @@ var sharedConfig = {
 	root: rootPath,
 	db : {
 		path: {}
-	}
+	},
+	fontFilePath : '/app/data/'
 };
 
 config = {

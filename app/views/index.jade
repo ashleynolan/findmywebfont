@@ -1,7 +1,8 @@
 extends layouts/default
 
 block vars
-	- var subText = 'This is a very basic app to show an example of structuring a website using Node.js.'
+	- var subText = 'Type in the font you want to find:'
 
 block content
-	p Here is some content inserted through a block. It's pretty awesome.
+	label(for="search-font") Find
+	input(name="search-font",id="search-font",type="text")

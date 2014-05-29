@@ -47,6 +47,10 @@ module.exports = function (app, config) {
 	app.use(methodOverride());
 
 
+	// Bootstrap routes in our webapp
+	require('./routes')(app);
+
+
 	// assume "not found" in the error msgs
 	// is a 404. this is somewhat silly, but
 	// valid, you can do whatever you like, set

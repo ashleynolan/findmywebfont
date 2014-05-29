@@ -14,7 +14,7 @@ module.exports = function (app) {
 
 	app.get('/', function(req, res) {
         res.render('index', {
-        	title : 'Basic Node Setup example'
+        	title : 'Find My Webfont'
         });
 	});
 

@@ -20,6 +20,13 @@ var env = process.env.NODE_ENV || 'local'		//get the environemnt var or set as d
 console.log('ENVIRONMENT = ' + env);
 
 
+//  ==========================================================================
+//  === Controls the backend – getting and setting fonts from the services ===
+//  ==========================================================================
+
+require('./app/controllers/fontController')(app, config);
+
+
 //  ================================
 //  === EXPRESS SETUP AND CONFIG ===
 //  ================================
@@ -28,13 +35,8 @@ console.log('ENVIRONMENT = ' + env);
 var app = express();
 
 
-// Bootstrap routes
-require('./core/routes')(app);
-
 // express settings
 require('./core/express')(app, config);
-
-
 
 
 

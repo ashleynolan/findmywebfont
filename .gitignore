@@ -27,5 +27,7 @@ dist/
 *.map
 _design/
 
+service-creds
+
 # Jekyll
 _site/
