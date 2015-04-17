@@ -141,16 +141,14 @@ function fileHandler (err, written, buffer) {
 
 
 
-module.exports = function (app, config) {
-
-
+module.exports = function (app, db, config) {
 
 	// TODO: Check server time, only run once per hour
 
 	// if now running
 
 	// First, we need to get our fonts.com authorisation key
-	getAuthKey();
-
+	// commented out for now so doesnt hit service all the time
+	//getAuthKey();
 
 }

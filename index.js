@@ -20,13 +20,6 @@ var env = process.env.NODE_ENV || 'local'		//get the environemnt var or set as d
 console.log('ENVIRONMENT = ' + env);
 
 
-//  ==========================================================================
-//  === Controls the backend – getting and setting fonts from the services ===
-//  ==========================================================================
-
-require('./app/controllers/fontController')(app, config);
-
-
 //  ================================
 //  === EXPRESS SETUP AND CONFIG ===
 //  ================================
@@ -39,6 +32,9 @@ var app = express();
 require('./core/express')(app, config);
 
 
+//bootstrap the database stuff
+var db = require('./core/db')(app, config);
+
 
 //Create the HTTP server with the express app as an argument
 var server = http.createServer(app);
@@ -50,6 +46,7 @@ server.listen(app.get('port'), function(){
 server.on('close', function(socket) {
 	console.log('app.js: Server has closed');
 });
+
 
 
 // expose app as the scope
